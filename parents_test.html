@@ -1,0 +1,39 @@
+<html>
+<head>
+  <style>
+
+  </style>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  <script>
+
+      $(function(){
+          $("button").click(function() {
+
+            var parentId = "TM901742";
+            var filtered = $(".e-treepanel-item-container").filter(function() {
+               return $(this).find("div[data-parent='${parentId}']");
+            });
+
+            filtered.css({"border": "2px solid blue"});
+
+          });
+       
+          });
+</script>
+</head>
+<body>
+ 
+    <div>
+        <div id="TM901742">
+            <div>자재정보관리</div>
+        </div>
+        <div class="e-treepanel-item-container">
+            <div data-parent="TM901742"><span>자재분류 현황</span></div>
+        </div>
+    </div>
+    <button>button</button>
+
+</body>
+</html>
