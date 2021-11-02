@@ -1,0 +1,46 @@
+<!-- <%@ page contentType="text/html;charset=UTF-8" language="java" %> -->
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <style>
+        * { margin: 0px; padding: 0px }
+
+        div
+        {
+            margin: 5px; padding: 3px;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+    </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+ 
+    <script>
+        $(document).ready(function(){
+            $("div").click(function(){
+                var header = $("h1", this).text(); // this를 제외하고 쓸 경우 모든 h1, p 태그의 text값이 출력
+                var paragraph = $("p", this).text();
+                $(this).append("<span>새로 추가된 아이템</span>");
+
+                alert(header + "\n" + paragraph);
+            });
+        });
+    </script>
+</head>
+<body>
+<div>
+    <h1>Header 1</h1>
+    <p>Paragraph</p>
+</div>
+<div>
+    <h1>Header 2</h1>
+    <p>Paragraph</p>
+</div>
+<div>
+    <h1>Header 3</h1>
+    <p>Paragraph</p>
+</div>
+</body>
+</html>
