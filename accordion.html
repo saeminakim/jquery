@@ -34,10 +34,14 @@
   <script>
     $(document).ready(function() {
         // // jQuery FUNCTION.
-        $("#accordion").accordion({
-            heightStyle: "content",
-            collapsible: true,
-        });
+        // $("#accordion").accordion({
+        //     heightStyle: "content",
+        //     collapsible: true,
+        // });
+
+        $("#accordion h3").click(function() {
+            $(this).next().slideToggle();
+        })
         // $("#accordion div").hide();
         // $("#accordion h3").click(function() {
         //   if($(this).hasClass('active')) {
@@ -65,15 +69,17 @@
   <div id="accordion">
   
       <h3>Asp.Net</h3>
+      <div>
           <div>Hello World (C#)
           <pre>
           using System;
           protected void Page_Load(object sender, EventArgs e)
           {
             Response.Write("Hello, world");
-          }</pre></div>
+          }</pre></div></div>
           
       <h3>jQuery</h3>
+      <div>
           <div>jQuery is a JavaScript library to write cross browser client side script.
           <pre>
           $(document).ready(function() {
@@ -82,18 +88,20 @@
               $('#Close').click(function() {
                   $('#div').hide();
               });    
-          });</pre></div>
+          });</pre></div></div>
           
       <h3>CSS</h3>
+      <div>
           <div>Cascading Style Sheets (CSS) is used for styling and laying HTML 
               elements on a web page.
           <pre>
           .classname div { 
               padding:3px 5px; border:solid 1px #CCC 
           }
-          </pre></div>
+          </pre></div></div>
           
       <h3>Ajax</h3>
+
           <div>Ajax (Asynchronous JavaScript and XML) allows Web applications to 
               send and receive data from a server, asynchronously. 
               It is a clean way of communicating with a server, 
@@ -101,12 +109,13 @@
           </div>
           
       <h3>SQL Server</h3>
+      <div>
           <div>Microsoft's SQL Server is a Relational Database Managment System (RDBMS), 
               whose primary function is to store and retrieve various types of data.
           <pre>
           SELECT EmpID, EmpName, Designation
               FROM Employee
-                  WHERE EmpID = 3</pre></div>
+                  WHERE EmpID = 3</pre></div></div>
   </div>
 </body>
 </html>

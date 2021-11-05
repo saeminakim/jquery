@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <style>
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+                $('div').click(function (e) {
+                    e.stopPropagation();
+                    // $(this).toggleClass('e-treepanel-item-depth1-wrapper-active');
+
+                    $(this).closest("[data-parent='TM901583']").css("border", "2px solid green");
+                    // $('#leftMenuTree').find("[data-parent='TM901583']").slideToggle();
+                });
+                // var leftMenuTree = $(document).find('#leftMenuTree');
+                // console.log(leftMenuTree);
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="leftMenuTree">
+        <div id="TM901583" class="e-treepanel-item-depth1-wrapper-active">
+            <div><span>ffff</span></div>
+
+        </div>
+        <div>
+            <div data-parent="TM901583">
+                <h1>Header 1</h1>
+                <p>Paragraph</p>
+            </div>
+            <div data-parent="TM901583">
+                <h1>Header 2</h1>
+                <p>Paragraph</p>
+            </div>
+            <div data-parent="TM901583">
+                <h1>Header 3</h1>
+                <p>Paragraph</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="leftMenuTree">
+        <span>111</span>
+    </div>
+    <div id="leftMenuTree">
+        <span>222</span>
+    </div>
+    <div id="leftMenuTree">
+        <span>333</span>
+    </div>
+</body>
+
+</html>
