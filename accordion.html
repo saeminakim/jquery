@@ -40,8 +40,16 @@
         // });
 
         $("#accordion h3").click(function() {
-            $(this).next().slideToggle();
+
+                $(this).next().find('.aaa.bbb').css("border", "2px solid green");
+
+                // $(this).next().find('#leftMenuTree_'+ id).css("border", "2px solid green");
+                // console.log(this.id);
         })
+
+        // $("#accordion h3").click(function() {
+        //     $(this).next().slideToggle();
+        // })
         // $("#accordion div").hide();
         // $("#accordion h3").click(function() {
         //   if($(this).hasClass('active')) {
@@ -68,15 +76,16 @@
 <body>
   <div id="accordion">
   
-      <h3>Asp.Net</h3>
+      <h3 id='MP'>Asp.Net</h3>
       <div>
-          <div>Hello World (C#)
-          <pre>
+          <div class="aaa bbbb">Hello World (C#)
+          <pre class="aaa"> 
           using System;
           protected void Page_Load(object sender, EventArgs e)
           {
             Response.Write("Hello, world");
-          }</pre></div></div>
+          }</pre></div>
+        </div>
           
       <h3>jQuery</h3>
       <div>
