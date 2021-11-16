@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI-Layout</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://layout.jquery-dev.com/lib/js/jquery.layout-latest.js"></script>
+  <link href="http://layout.jquery-dev.com/lib/css/layout-default-latest.css" rel="stylesheet"/>
+<script>
+  $(document).ready(function() {
+    $('body').layout({
+      applyDefaultStyles: true,
+      north__size:120,
+    });
+  });
+</script>
+<style>
+  .topmenu {
+    display: inline;
+    text-align: center;
+    /* height: 40px; */
+    background-color: gray;
+  }
+  .wrapper {
+    height: 70px;
+    border: 1px solid blue;
+    display: inline;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="ui-layout-center">center</div>
+  <div class="ui-layout-north">
+    <div class="topmenu">
+      <div class="wrapper">div1</div>
+    </div>
+    <div class="topmenu">
+      <div class="wrapper">div2</div>
+    </div>
+    <div class="topmenu">
+      <div class="wrapper">div3</div>
+    </div>
+  </div>
+  <div class="ui-layout-west">west</div>
+
+  <div></div>
+</body>
+</html>
